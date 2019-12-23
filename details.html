@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>追易——使追星变得更容易</title>
+	<link rel="stylesheet" href="details.css">
+</head>
+<body>
+	<div class="header">
+		<div class="head">
+			<ul>
+				<li>欢迎您，小包包</li>
+				<li>❤追易周边商城——应有尽有❤</li>
+			</ul>
+			<div class="heads">
+				<img id="logo" src="imgs/logo.jpg">
+				<form>
+					<input type="txt" name="搜索">
+				</form>
+				<div id="src"><img src="imgs/search.png"></div>
+				<div id="cart"><img src="imgs/cart.png"></div>
+				<p id="words">购物车里有<span id="goods">2</span>件商品</p>
+			</div>
+			
+		</div>
+	</div>
+	<div class="nav">
+		<p>全部商品分类</p>
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">专辑</a></li>
+			<li><a href="#">海报</a></li>
+			<li><a href="#">写真</a></li>
+			<li><a href="#">配饰挂坠</a></li>
+			<li><a href="#">日常用品</a></li>
+			<li><a href="#">应援棒</a></li>
+			<li><a href="#">积分商城</a></li>
+			<li><a href="#">抽奖游戏</a></li>
+		</ul>
+	</div>
+
+	
+	<div class="small">
+		<div id="simgs">
+			<img src="imgs/lightstick0.jpg">
+			<img src="imgs/lightstick1.jpg">
+			<img src="imgs/lightstick2.jpg">
+			<img src="imgs/lightstick3.jpg">
+		</div>
+		<div class="msg">
+	    	<h2>GOT7 - OFFICIAL LIGHT STICK 2018</h2>
+	    	<h3>CNY 232.04</h3>
+	    	<div class="tip">
+	    		<ul id="tipword">
+	    			<li>积分</li>
+	    			<li>发行日</li>
+	    			<li>预计发行时间</li>
+	    			<li>销售记录</li>
+	    		</ul>
+	    		<ul id="tipnum">
+	    			<li>38</li>
+	    			<li>2018-04-25 | GD00033261</li>
+	    			<li>2019-11-20</li>
+	    			<li>20,953</li>
+	    		</ul>
+	    	</div>
+	    	<div class="sell">
+	    		<p class="selltitle">数量</p>
+	    		<form>
+	    			<p>GOT7 - OFFICIAL LIGHT STICK 2018</p>
+	    			<input type="button" value="-" id="minus">
+	    			<input type="text" value="0" id="sellnum">
+	    			<input type="button" value="+" id="plus">
+	    		</form>
+	    		<p class="selltitle">总计</p>
+	    		<h3>CNY  <span id="money">0</span></h3>
+	    	</div>
+	    	<ul class="buy">
+	    		<li id="pay">去结算</li>
+	    		<li id="cartadd">加入购物车</li>
+	    	</ul>
+	    </div>
+	</div>
+   <div id="box">
+	    <div id="img1">
+	         <img src="imgs/lightstick0.jpg" id="mainimg"/>
+	         <div id="slider"></div>
+	  	</div>  
+	    <div id="img2">
+	        <img src="imgs/lightstick0.jpg"  id="Bimg"/>
+	    </div>
+	</div>
+	<div class="longimg">
+		<h2>GOT7 - OFFICIAL LIGHT STICK 2018</h2>
+		<img src="imgs/lightstick4.png">
+	</div>
+	<div class="last-wrap">
+		<div class="last">
+			<ul>
+				<li><a href="#">帮助</a><span>|</span></li>
+				<li><a href="#">用户协议</a><span>|</span></li>
+				<li><a href="#">隐私声明</a><span>|</span></li>
+				<li><a href="#">常见问题</a><span>|</span></li>
+				<li><a href="#">合作伙伴</a><span>|</span></li>
+				<li><a href="#">关联账号</a><span>|</span></li>
+				<li><a href="#">关于我们</a><span>|</span></li>
+				<li><a href="#">法律服务</a></li>
+			</ul>
+			<p>©  2019-2020  追易  版权所有</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var simgs = document.getElementById("simgs").getElementsByTagName("img");
+	var mainimg=document.getElementById("mainimg");
+	var Bimg=document.getElementById("Bimg");
+	for(var i=0;i<simgs.length;i++){
+		simgs[i].onmouseover = function(){
+			mainimg.src = this.src;
+			Bimg.src = this.src;
+		}
+	}
+	var sellnum = document.getElementById("sellnum");
+	var money = document.getElementById("money");
+	var minus = document.getElementById("minus");
+	var plus = document.getElementById("plus");
+	sellnum.onkeyup = function(){
+		if(sellnum.value >=0){
+			money.innerHTML = sellnum.value * 232.04;
+		}else{
+			money.innerHTML = 0;
+		}
+	}
+	minus.onclick = function(){
+		if(sellnum.value > 0){
+			sellnum.value--;
+		}else{
+			sellnum.value = 0;
+		}
+		money.innerHTML = sellnum.value * 232.04;
+	}
+	plus.onclick = function(){
+		sellnum.value++;
+		money.innerHTML = sellnum.value * 232.04;
+	}
+	var cartadd = document.getElementById("cartadd");
+	var pay = document.getElementById("pay");
+	var goods = document.getElementById("goods");
+	cartadd.onclick = function(){
+		if(money.innerHTML>0){
+			alert("商品已成功加入购物车");
+			goods.innerHTML = parseInt(goods.innerHTML)+parseInt(sellnum.value);
+		}else{
+				alert("商品为空");
+		}
+	}
+	pay.onclick = function(){
+		if(money.innerHTML>0){
+			var con = confirm("您确定要下单吗？");
+			if(con){
+				window.location.href="pay.html";
+			}
+		}else{
+			alert("商品为空");
+		}
+		
+	}
+	//放大镜
+	var box = document.getElementById("box");
+	var img1 = document.getElementById("img1");
+	var slider = document.getElementById("slider");
+	var img2 = document.getElementById("img2");
+	var Bimg = document.getElementById("Bimg");
+	img1.onmouseover = function(){
+		slider.style.display = "block";
+		img2.style.display = "block";
+	}
+	img1.onmouseout = function(){
+		slider.style.display = "none";
+		img2.style.display = "none";
+	}
+	img1.onmousemove = function(ev){
+		var ev = ev||window.event;
+		var left = ev.clientX - box.offsetLeft - slider.offsetWidth/2+60;
+		var top = ev.clientY - box.offsetTop - slider.offsetHeight/2-50;
+		var maxLeft = img1.offsetWidth - slider.offsetWidth;
+		var maxTop = img1.offsetHeight - slider.offsetHeight;
+		left = left>maxLeft?maxLeft:left<0?0:left;
+		top = top>maxTop?maxTop:top<0?0:top;
+		slider.style.left = left +"px";
+		slider.style.top = top +"px";
+		var w = left/maxLeft;
+		var h = top/maxTop;
+		var BmaxLeft = img2.offsetWidth - Bimg.offsetWidth; 
+		var BmaxTop = img2.offsetHeight - Bimg.offsetHeight; 
+		Bimg.style.left = w*BmaxLeft + "px";
+		Bimg.style.top = h*BmaxTop + "px";
+	}
+ </script>
+</html>

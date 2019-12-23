@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>付款页</title>
+</head>
+<body>
+	<h1 style="text-align: center">付款失败，请稍后再试</h1>
+	<h2 style="text-align: center">无操作页面将在<span id="timer"></span>秒后返回商品页</h2>
+</body>
+<script type="text/javascript">
+	var timer = document.getElementById("timer");
+	timer.innerHTML = 5;
+	window.onload = setTimeout(function(){
+		window.location.href="details.html";
+	}, 5000)
+	window.onload = setInterval(function(){
+		timer.innerHTML--;
+	}, 1000)
+</script>
+</html>

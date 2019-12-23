@@ -1,0 +1,343 @@
+/*
+* @Author: 陈欣
+* @Date:   2019-12-22 18:48:17
+* @Last Modified by:   陈欣
+* @Last Modified time: 2019-12-23 23:09:57
+*/
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+.header{
+	height: 150px;
+	background: pink;
+	margin: 0 auto;
+	position: relative;
+}
+.head{
+	height: 150px;
+	width: 1200px;
+	margin: 0 auto;
+} 
+.head ul{
+	height: 20px;
+	margin-top:10px;
+	float: right;
+	font-size: 15px;
+	color: #fff;
+}
+.head ul li{
+	margin-left:25px;
+	float:right; 
+}
+.heads{
+	height: 80px;
+	width: 120px;
+}
+#logo{
+	border-radius:20px;
+	margin-top: 20px;
+	float: left;
+	height: 100px;
+	width: 140px;
+}
+.head form input{
+	border: none;
+	float: left;
+	height: 30px;
+	width: 500px;
+	margin-top: -50px;
+	margin-left: 250px;
+	
+}
+#src{
+	border-radius: 0px 5px 5px 0px;
+	background: #EE1289;
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin-top: -50px;
+	margin-left: 751px;
+	text-align: center;
+}
+#src img{
+	margin-top: 5px;
+	height: 20px;
+	width: 20px;
+}
+#cart{
+	border-radius:10px 0px 0px 10px;
+	background: #fff;
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin-top: -50px;
+	margin-left:900px;
+	text-align: center;
+} 
+#cart img{
+	margin-top: 2px;
+	height: 25px;
+	width: 25px;
+}
+#words{
+	border-radius:0px 10px 10px 0px;
+	height: 32px;
+	width: 200px;
+	float: left;
+	margin-left:932px;
+	background: #fff;
+	font-size: 20px;
+	color: #EE7600;
+	text-align: center;
+	line-height: 32px;
+	margin-top: -50px;
+}
+.small{
+	width: 1200px;
+	margin:auto;
+	margin-top:60px;
+	position: relative;
+}
+#simgs{
+	height: 300px;
+	width: 75px;
+	float: left;
+	position: absolute;
+}
+
+#simgs img{
+	margin-top: 30px;
+	height: 50px;
+	width: 50px;
+	border-radius:5px;
+	cursor: pointer;
+	border: 2px solid;
+	border-color: pink;
+}
+#simgs img:hover
+{ 
+	border-color:#00ff00;
+}
+.msg{
+	width:500px;
+	float: right;
+	margin-right: 70px;
+	text-align: center;
+}
+.msg h3{
+	color: red;
+	margin-top: 10px;
+}
+.tip{
+	height: 100px;
+	margin-top: 20px;
+	border-bottom: 2px solid pink;
+	border-top: 2px solid pink;
+}
+.tip ul{
+	margin-top: 5px;
+	margin-left: 20px;
+	float: left;
+	text-align: left;
+}
+#tipword{
+	font-weight: bolder;
+}
+#tipnum{
+	margin-left:150px;
+}
+.sell{
+	height: 140px;
+	text-align: left;
+	margin-top: 20px;
+	border-left: 2px solid pink;
+	border-right: 2px solid pink;
+	border-bottom: 2px solid pink;
+}
+.selltitle{
+	height: 30px;
+	line-height: 30px;
+	padding-left:20px; 
+	background: pink;
+	color: #000;
+}
+.sell form{
+	height: 50px;
+	line-height: 50px;
+}
+.sell form p{
+	float: left;
+	margin-left: 20px;
+	margin-right: 80px;
+	font-size: 15px;
+}
+.buy{
+	margin-top: 30px;
+}
+.buy li{
+	height: 50px;
+	line-height: 50px;
+	border-radius:5px;
+	float: right;
+	width: 100px;
+	background: pink;
+	color:#fff;
+	margin-right:80px;
+}
+.buy li:hover{
+	cursor:pointer;
+}
+#minus{
+	margin-right: -5px;
+	height: 30px;
+	width: 30px;
+	font-size: 20px;
+}
+#plus{
+	margin-left: -5px;
+	height: 30px;
+	width: 30px;
+	font-size: 20px;
+}
+#sellnum{
+	height: 25px;
+	width: 45px;
+	font-size: 18px;
+	text-align: center;
+}
+.sell h3{
+	color: red;
+	line-height: 10px;
+	text-align: right;
+	padding-right: 30px;
+}
+
+
+.nav{
+	border-bottom: 5px solid pink;
+	width: 1200px;
+	height: 35px;
+	margin: 0 auto;
+}
+.nav p{
+	float: left ;
+	font-size: 14.78px;
+	color: #050505;
+	margin-right:-15px;
+	line-height: 35px;
+}
+.nav li{
+	float:left;
+	margin-left: 77px;
+	line-height: 35px;
+}
+.nav li a{
+	font-size: 14.78px;
+	color: #000000;
+}
+.nav li:hover{
+	border-radius:5px;
+	color: pink;
+	background: pink;
+}
+
+#box{
+	width:800px;
+	height:402px;
+	position:relative;
+	margin:0px auto;
+}
+#img1{
+	margin-top: 50px;
+	margin-left: -65px;
+	width:300px;
+	height:300px;
+	position:absolute;
+	top:0;
+	border: 2px solid pink;
+}
+#mainimg{
+	width:300px;
+	height:300px;
+}
+#slider{
+	width:125px;
+	height:72px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:#CCC;
+	opacity:0.4;
+	cursor: move;
+	display:none; 
+	filter:alpha;
+}
+#img2{
+	margin-top: 50px;
+	left:250px;
+	position:absolute;
+	right: 300px;
+	top:0;
+	display:none; 
+	width:500px;
+	height:300px;
+	overflow:hidden;
+}
+#Bimg{
+	position:absolute;
+	height: 1200px;
+	width: 1200px;
+	left:0;
+	top:0;
+}
+
+.longimg{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 100px;
+	border-top: 2px solid pink;
+}
+.longimg h2{
+	margin: 20px;
+}
+.last-wrap{
+	height: 100px;
+	background-color: pink;
+}
+.last{
+	width: 1200px;
+	margin: 0 auto;
+}
+.last ul{
+	height: 40px;
+	margin-left: 235px;
+}
+.last ul li{
+	float: left;
+	margin-top: 20px;
+}
+.last li a{
+	font-size: 14px;
+	color: #ffffff;
+}
+.last li span{
+	font-size: 14px;
+	color: #ffffff;
+	padding: 0 15px;
+}
+.last p{
+	width: 1200px;
+	text-align: center;
+	font-size: 14px;
+	color: #ffffff;
+	margin-top: 20px ;
+}
