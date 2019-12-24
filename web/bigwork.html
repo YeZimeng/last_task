@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bigwork.css">
+	<script src="animate.js"></script>
+</head>
+<body>
+	<div class="big">
+		<div id="box" class="box">
+			<div class="info" id="info">			
+				<span class="tip"><a href="#">星闻</a></span>
+				<span class="tip"><a href="#">明星库</a></span>
+				<span class="tip"><a href="#">图吧</a></span>
+				<span class="tip"><a href="https://idol001.com/app.html#md4">热门明星</a></span>		
+				<span class="name2"><a href="#">退出</a></span>
+				<span class="name1"><a href="#">你好 小包包!</a></span>
+			</div>
+			<div class="slide" id="slide">
+				<div class="slider" id="slider">
+					<div class="imgs"><img src="images/hua.jpg"></div>
+					<div class="imgs"><img src="images/yyqx.jpg"></div>
+					<div class="imgs"><img src="images/wu.jpg"></div>
+					<div class="imgs"><img src="images/yi2.png"></div>
+					<div class="imgs"><img src="images/baby1.jpg"></div>
+					<div class="imgs"><img src="images/hua.jpg"></div>
+					<div class="imgs"><img src="images/qian.jpg"></div>
+				</div>
+			</div>
+			<span id="left"><<</span>
+			<span id="right">>></span>
+			<ul class="nav" id="nav">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="second" id="second">
+			<div class="two">
+				<p class="man">男明星</p>
+				<div class="star1" id="star1">
+					<div class="img"><a href="file:///C:/Users/lenovo/AppData/Local/Temp/BNZ.5e017def3c7175ee/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/zuoye.html"><img src="images/hcy.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/peng.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/zyx.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/zyl.jpg"></a></div>
+					<div class="img" style="float:right;"><a href="#"><img src="images/cwt.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/lyf11.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/yl.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/xz.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/lx.jpg"></a></div>
+					<div class="img" style="float:right"><a href="#"><img src="images/hg.jpg"></a></div>				
+				</div>
+				<p class="woman">女明星</p>
+				<div class="star2">
+					<div class="img"><a href="#"><img src="images/baby.jpg"></a></div>
+					<div class="img"><a href="#"><img src="images/zhao.jpg"></a></div>
+					<div class="img"><img src="images/zhangbo.jpg"></div>
+					<div class="img"><img src="images/piao.jpg"></div>
+					<div class="img"><img src="images/cai.jpg"></div>
+					<div class="img"><img src="images/kqz.jpg"></div>
+					<div class="img"><img src="images/zs.jpg"></div>
+					<div class="img"><img src="images/dlrb.jpg"></div>
+					<div class="img"><img src="images/lyfn.jpg"></div>
+					<div class="img"><img src="images/ym.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="third">
+			<div class="three">
+				<p class="shop">&nbsp周边商城</p>
+				<ul>
+					<li>
+						<a href="file:///C:/Users/lenovo/AppData/Local/Temp/BNZ.5e00e1163a0cc5c9/%E4%BB%BB%E5%8A%A18%20%20--%20%E9%99%88%E6%AC%A3/details.html"><img class="img1" src="images/鸟棒.jpg">
+							<div class="hide">
+								<p class="p1">价格:¥232.04</p>
+								<p>GOT7 - OFFICIAL LIGHT STICK 2018</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img class="img1" src="images/diao.jpg">
+							<div class="hide">
+								<p class="p1">价格:¥220.8</p>
+								<p>ACRYLIC KEYRING</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img class="img1" src="images/cup.jpg">
+							<div class="hide">
+								<p class="p1">价格:¥209.9</p>
+								<p>MESSAGE MUG</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img class="img1" src="images/huizhang.jpg">
+							<div class="hide">
+								<p class="p1">价格:¥200</p>
+								<p>PVC NAME TAG</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="last">
+		<p>优酷|微博|腾讯视频|爱奇艺|哔哩哔哩|淘宝|京东|网易云音乐</p>
+		<p>© 2017-2018 明星网有限公司 版权所有</p>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var slider=document.getElementById("slider");
+	var slide=document.getElementById("slide");
+	var left=document.getElementById("left");
+	var right=document.getElementById("right");
+	var index=1;
+	var navli=document.getElementById("nav").children;
+	var isMoving=false;
+	function next(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index++;
+		change();
+		animate(slider,{left:-1200*index},function(){
+			if(index===6){
+				slider.style.left="-1200px";
+				index=0;
+			}
+			isMoving=false;
+		});
+	}
+	function pre(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index--;
+		change();
+		animate(slider,{left:-1200*index},function(){
+			if(index===0){
+				slider.style.left="-6000px";
+				index=6;
+			}
+			isMoving=false;
+		});
+	}
+	var timer=setInterval(next,3000);
+	box.onmouseover=function(){
+		animate(left,{opacity:30})
+		animate(right,{opacity:30})
+		clearInterval(timer);
+	} 
+	box.onmouseout=function(){
+		animate(left,{opacity:0})
+		animate(right,{opacity:0})
+		timer=setInterval(next,3000);
+	}
+	right.onclick=next;
+	left.onclick=pre;
+
+	for(var i=0;i<navli.length;i++){
+		navli[i].idx=i;
+		navli[i].onclick=function(){
+			index=this.idx+1;
+			change();
+			animate(slider,{left:-1200*(index)})
+		}
+	}
+	function change(){
+		for(var i=0;i<navli.length;i++){
+			navli[i].className="";
+		}
+		if(index===6){
+			navli[0].className="active";
+		}
+		else if(index===0){
+			navli[4].className="active";
+		}else{
+			navli[index-1].className="active";
+		}
+	}
+
+	
+			
+</script>
+</html>
