@@ -1,0 +1,252 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>排行榜₍ᐢ •⌄• ᐢ₎</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+        body{
+            background-color: orange;
+        }
+		ul,li{
+			list-style: none;
+		}
+		.fix{
+			position: fixed;
+			/* left: 5px; */
+			/* top: 30%; */
+            margin-top: -18px;
+		}
+		.fix li{
+			width: 39px;
+			height: 120px;
+			text-align: center;
+			line-height: 30px;
+			margin-bottom: 2px;
+			background-color: pink;
+		}
+		.div{
+			width: 1200px;
+			height: 600px;
+			margin: 20px auto;
+
+            margin-right: 23px;
+
+			/* background-color: #ddd; */
+			font-size: 50px;
+			/* text-align: center;
+			line-height: 400px; */
+		}
+		#div1{
+			/* background-color: #ccc; */
+            background-image: url(image1/zhou_02.gif);
+            
+            /* text-align: left;
+			line-height: 400px; */
+		}
+		#div2{
+			/* background-color: #FFFF37; */
+            background-image: url(image1/lijian.jpg);
+		}
+		#div3{
+			/* background-color: #FFBB77; */
+            background-image: url(image1/huachenyu.png);
+            ;
+		}
+		#div4{
+			/* background-color: #81C0C0; */
+            background-image: url(image1/yiyang.png);
+		}
+		#div5{
+			/* background-color: #C2FF68; */
+            
+            background-image: url(image1/wangjunkai.jpeg);
+		}
+        #qaq{
+            float: left;
+            margin-top: 150px;
+            margin-left: 50px;
+            font-family: "仿宋";
+            font-weight: bold;
+        }
+        #lijian{
+            float: left;
+            margin-top: 400px;
+            margin-left: 100px;
+            color: #fff;
+            font-family: "仿宋";
+            font-weight: bold;
+        }
+        #hua{
+            float: left;
+            margin-top: 150px;
+            margin-left: 950px;
+            color: #fff;
+            font-family: "仿宋";
+            font-weight: bold;
+        }
+        #yi{
+            float: left;
+            margin-top: 150px;
+            margin-left: 1000px;
+            color: rgb(35, 6, 63);
+            font-family: "仿宋";
+            font-weight: bold; 
+        }
+        #wang{
+            float: left;
+            font-weight: bold;
+            font-family: "仿宋";
+            margin-top: 50px;
+            margin-left: 500px;
+            color: rgb(35, 6, 63);
+            /* 550 */
+        }
+	</style>
+	
+</head>
+<body>
+	<ul class="fix">
+		<li onclick="goTo('#div1')" style="background-color: pink;">NO.1<br>周<br>杰<br>伦</li>
+		<li onclick="goTo('#div2')" style="background-color: pink;">NO.2<br>李<br>健</li>
+		<li onclick="goTo('#div3')" style="background-color: pink;">NO.3<br>华<br>晨<br>宇</li>
+		<li onclick="goTo('#div4')" style="background-color: pink;">NO.4<br>易烊<br>千玺</li>
+		<li onclick="goTo('#div5')" style="background-color: pink;">NO.5<br>王<br>俊<br>凯</li>
+	</ul>
+	<div class="div" id="div1">
+        <div id="qaq">亚洲天王<br>&nbsp周杰伦</div>
+    </div>
+	<div class="div" id="div2">
+        <div id="lijian">音乐诗人<br>&nbsp&nbsp&nbsp李健</div>
+    </div>
+	<div class="div" id="div3">
+        <div id="hua">音乐奇才<br>&nbsp华晨宇</div>
+    </div>
+	<div class="div" id="div4">
+        <div id="yi">
+            翩易<br>翩烊<br>少千<br>年玺<br>
+            <!-- 易<br>烊<br>千<br>千 -->
+        </div>
+    </div>
+	<div class="div" id="div5">
+        <div id="wang"><i>花样美男<br>王俊凯</i></div>
+    </div>
+</body>
+<script>
+	function goTo(s){
+		location.hash = s; 
+	}
+    // var a=document.getElementsByTagName("li");
+    // for(var i=0;i<a.length;i++)
+    // {
+    //     a[i].onclick=function as(){
+    //         for(var j=0;j<a.length;j++)
+    //         {
+    //             a[j].style.backgroundColor="pink";
+    //         }
+    //         a[i].style.backgroundColor="red";
+    //     }
+    // }
+
+    var div1=document.getElementById("div1");
+    qaq=document.getElementById("qaq");
+
+    div1.onmouseover=function(){
+        // var a=parseInt(getStyle(qaq,"margin-left"));
+        
+        // if(a==50){
+        //     clearInterval(time);
+        //     asa();
+        // }
+        function asa(){
+        var now=parseInt(getStyle(qaq,"margin-left"));
+        if(now==150){
+            // aaa.style.marginLeft=800+"px";
+            clearInterval(time);
+        }else{
+            qaq.style.marginLeft=now+1+"px";
+        }
+        }
+        var time=setInterval(asa,15);
+    }
+    // function asa(){
+    //     var now=parseInt(getStyle(qaq,"margin-left"));
+    //     if(now==150){
+    //         // aaa.style.marginLeft=800+"px";
+    //         clearInterval(time);
+    //     }else{
+    //         qaq.style.marginLeft=now+1+"px";
+    //     }
+    // }
+    // var time=setInterval(asa,15);
+    // div1.onmouseout=function(){
+    //     qaq.style.marginLeft=50+"px";
+    // }
+
+
+    var div2=document.getElementById("div2");
+    var lijian=document.getElementById("lijian");
+    div2.onmouseover=function(){
+        function aa(){
+        var now=parseInt(getStyle(lijian,"margin-left"));
+        if(now==200){
+            // aaa.style.marginLeft=800+"px";
+            clearInterval(time1);
+        }else{
+            lijian.style.marginLeft=now+1+"px";
+        }
+        }
+        var time1=setInterval(aa,15);
+    }
+
+    var div3=document.getElementById("div3");
+    var hua=document.getElementById("hua");
+    div3.onmouseover=function(){
+        function aam(){
+        var now=parseInt(getStyle(hua,"margin-left"));
+        if(now==800){
+            // aaa.style.marginLeft=800+"px";
+            clearInterval(time2);
+        }else{
+            hua.style.marginLeft=now-1+"px";
+        }
+        }
+        var time2=setInterval(aam,15);
+    }
+    var div4=document.getElementById("div4");
+    var yi=document.getElementById("yi");
+    div4.onmouseover=function(){
+        function aam(){
+        var now=parseInt(getStyle(yi,"margin-left"));
+        if(now==800){
+            clearInterval(time6);
+        }else{
+            yi.style.marginLeft=now-1+"px";
+        }
+        }
+        var time6=setInterval(aam,15);
+    }
+    var div5=document.getElementById("div5");
+    var wang=document.getElementById("wang");
+    div5.onmouseover=function(){
+        function aam1(){
+        var now=parseInt(getStyle(wang,"margin-top"));
+        if(now==200){
+            clearInterval(time62);
+        }else{
+            wang.style.marginTop=now+1+"px";
+        }
+        }
+        var time62=setInterval(aam1,15);
+    }
+    function getStyle(obj,attr){
+        if(obj.currentStyle){
+            return obj.currentStyle[attr];
+        }else{
+            return getComputedStyle(obj,null)[attr];
+        }
+    }
+</script>
+</html>
