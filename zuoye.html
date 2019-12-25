@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>华晨宇</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		.fix{
+			position: fixed;
+			left: 10px;
+			top: 30%;
+		}
+		.fix li{
+			width: 100px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			margin-bottom: 5px;
+			background-color: #59f0f0;
+			color:#facd89;
+		}
+		.div{
+			width: 1200px;
+			height: 660px;
+			margin: 20px auto;
+			background-color: #ccc;
+			font-size: 50px;
+			line-height: 400px;
+		}
+		#div1{
+			background-color: #f1c4d7;
+		}
+		.aa{
+			color: red;
+			font-size: 25px;
+			margin-top: -300px;
+			margin-left: 130px;
+		}
+		.bb{
+			color: black;
+			font-size: 20px;
+			margin-top: -350px;
+			margin-left: 80px;
+		}
+		.nav2{
+		  width: 1200px;
+          height: 50px;
+          background-color:black;
+          float: right;
+          margin-top: -320px;
+		}
+		.cc{
+          float: right;
+          font-size: 12px;
+          color:white ;
+          margin-top: -220px;
+          margin-right:100px;
+		}
+		.dd{
+			margin-top: 0px;
+			text-align: center;
+			font-size: 18px;
+			line-height: 50px;
+			color: #a0a0a0;
+		}
+		.standard{
+            color: red;
+			font-size: 25px;
+			margin-top: -930px;
+			margin-left: 330px;
+		}
+		.standard1{
+			color: black;
+			font-size: 18px;
+			margin-left: 320px;
+            margin-top:-350px;
+		}
+		.jieshao1{
+			font-size: 20px;
+			float: right;
+			margin-top: -230px;
+			margin-right: 400px;
+		}
+		.h{
+			margin-bottom: -310px;
+			color: #00b7ee;
+		}
+		.jieshao2{
+			font-size: 20px;
+			float: right;
+			margin-top: -230px;
+            margin-right: -450px;
+		}
+		.c{
+			margin-bottom: -310px;
+			color:#00b7ee ;
+		}
+		.c a{
+			color:#00b7ee ;
+		}
+		 #tooltip {
+            width: 100px;
+            height: 50px;
+            position: fixed;
+            background: #f19ec2;
+            display: inline;
+            border: 1px solid white;
+        }
+		#div2{
+			background-color: #fff799;
+		}
+		.box{
+			width:1200px;
+			height: 658px;
+			border: 3px solid red;
+			margin: 10px auto;
+			position:relative ;
+			overflow: hidden; 
+		}
+		.slider{
+			width: 8400px;
+			position:absolute;
+			left: -1200px;
+		}
+		.slide{
+			width: 1200px;
+			overflow: hidden;
+			float: left;
+			height: 600px;
+		}
+		.box>span{
+			display: block;
+			width: 30px;
+			height: 50px;
+			text-align: center;
+			cursor: pointer;
+			/* color:  ; */
+			top: 275px;
+		    line-height: 50px;
+		    background: rgb(255,0,0);
+		    font-size: 30px;
+		    position: absolute;
+		    opacity: 0; 
+		}
+		#left{
+			left: 30px;
+			color: white;
+		}
+		#right{
+			right: 30px;
+			color: white;
+		}
+		.nav{
+			position: absolute;
+			left: 500px;
+			bottom: 20px;
+		}
+		.nav>li{
+			float: left;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			background: #ccc;
+			cursor: pointer;
+			margin: 0 10px;
+			border-radius: 50%;
+			margin-left: 5px;
+		}
+        .nav .active{
+	        background: red;
+        }
+		#div3{
+			background-color: #FFBB77;
+		}
+		.title{
+			width: 1200px;
+			height: 40px;
+			background-color: black;
+		}
+		.t{
+			color: white;
+			font-size: 14px;
+			float: right;
+            margin-top: -180px;
+            margin-right: 15px;
+		}
+
+		.aa a{
+			display: block;
+			color: red;
+			width: 620px;
+			height: 60px;
+			text-align: left;
+			font-size: 20px;
+            float: left;
+		}
+		a:hover{
+			color: blue;
+			text-decoration: underline;
+		}
+		#div4{
+			background: url(hhimg/hcy5.jpg);
+			width: 1475px;
+
+		}
+	    .red{
+	     background-color:red;
+	     width:1480px;
+	     height:50px;
+	     position:relative;
+	     left:-1480px;
+	     top:0px;
+	    }
+	    .blue{
+	     background:blue;
+	     width:100px;
+	     height:40px;
+	     position:absolute;
+	     left:1480px;
+	     top:2px;
+	    }
+       .dai{
+       	margin-top: -180px;
+       	font-size: 16px;
+       	color: white;
+       	margin-left: 5px;
+       }
+       .biao{
+         font-size: 18px;
+       	 color: pink;
+       	 float: right;
+       	 margin-top: -180px;
+       	 margin-right: 100px;
+       }
+       .zhuanji{
+       	margin-top: -320px;
+       	margin-left: 70px;
+       }
+       .hcy{
+       	width: 900px;
+       	height: 25px;
+       	font-size: 14px;
+       	color: pink;
+       }
+       .hrr{
+       	margin-top: -50px;
+       }
+       .hrr a{
+       	color: red;
+       	font-size: 20px;
+       	float: right;
+       	margin-left: 80px;
+       	margin-right: 60px;
+       }
+       .last-wrap{
+			height:200px;
+			background-color: pink;
+		}
+		.last{
+			width:1450px;
+			margin: 0 auto;
+		}
+		.last ul{
+			height: 40px;
+			margin-left:300px ;
+		}
+		.last ul li{
+			float: left;
+			margin-top: 50px;
+			list-style: none;
+			margin-left: 10px;
+		}
+		.last li a{
+			font-size: 14px;
+			color: #ffffff;
+		}
+		.last li span{
+			font-size: 14px;
+			color: #ffffff;
+			padding: 0 10px;
+		}
+		.last p{
+			text-align: center;
+			font-size: 14px;
+			color: #ffffff;
+			margin-top: 60px ;
+		} 
+		.hhh{
+			float: right;
+			margin-right: -135px;
+			margin-top: -72px;
+			
+		}
+		.button{
+			width: 100px;
+			height: 40px;
+		}
+	</style>
+	
+</head>
+<body >
+	<ul class="fix">
+		<li onclick="goTo('#div1')">人物介绍</li>
+		<li onclick="goTo('#div2')">最新图片</li>
+		<li onclick="goTo('#div3')">最新动态</li>
+		<li onclick="goTo('#div4')">代表作品</li>
+	</ul>
+	<div style="background:url(hhimg/background.png)">
+	<div class="div" id="div1">
+      <div class="nav1">
+		<img src="hhimg/hcy2.jpg" style="width:250px;margin-left: 50px;margin-top: 25px">
+		<img src="hhimg/hcy3.jpg" style="width:250px;margin-bottom:-145px;margin-left:20px">
+		<a href="https://baike.baidu.com/item/%E5%8D%8E%E6%99%A8%E5%AE%87/6064097?fr=aladdin"><p class="aa">华晨宇</p></a>
+		<p class="bb">华语乐坛领军唱作人</p>
+		<p class="standard">代表作品</p>
+		<p class="standard1">《烟火里的尘埃》《好想爱在这个世界啊》</p>
+	 </div>
+	 <div class="nav2">
+	 	<p class="dd">华 | 晨 | 宇</p>
+	 	<p class="cc"> Hello , 欢迎回来 ~</p>
+	 </div>
+	 <div>
+	  <ul class="jieshao1">
+	 	<li class="h">姓名:华晨宇</li>
+	 	<li class="h">别名:花花</li>
+	 	<li class="h">星座:水瓶座</li>
+	 	<li class="h">职业：歌手</li> 
+	  </ul>
+	  <ul class="jieshao2">
+	  	<li class="c">出生地：湖北十堰</li>
+	  	<li class="c">出生日期：1990/02/07</li>
+	  	<li class="c">毕业院校：武汉音乐学院</li>
+	  	<li class="c"><a href="https://music.163.com/#/song?id=29004400&market=baiduqk">代表作品：《烟火里的尘埃》</a></li>
+	  </ul>
+
+	 </div>
+	</div>
+	<div class="div" id="div2">
+		<div class="box" id="box">
+		<div class="slider" id=slider>
+			<div class="slide"><img src="hhimg/55.jpg" alt=" "></div>
+            <div class="slide"><img src="hhimg/11.jpg" alt=" ">
+            </div>
+            <div class="slide"><img src="hhimg/22.jpg" alt=" ">
+            </div>
+            <div class="slide"><img src="hhimg/33.jpg" alt=" ">
+            </div>
+            <div class="slide"><img src="hhimg/44.jpg" alt=" ">
+            </div>
+            <div class="slide"><img src="hhimg/55.jpg" alt=" ">
+            </div>
+            <div class="slide"><img src="hhimg/11.jpg" alt=" ">
+            </div>
+		</div>
+		<span id="left"></span>
+		<span id="right"></span>
+		<ul class="nav" id="nav">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+	    </ul>
+	</div>
+	</div>
+	<div class="div" id="div3">
+		<div class="title">
+			<p class="t">关于华晨宇的最近行程~</p>
+		</div>
+		<img src="hhimg/hcy4.jpg" style="width:300px;margin-top:30px;float:right;margin-right:-100px">
+		<div class="aa">
+
+		<a href="http://baijiahao.baidu.com/s?id=1653626631481513282&wfr=spider&for=pc">Ⅰ华晨宇：新歌《好想爱这个世界啊》发行仅19天销量破千万
+		</a>
+
+		<a href="https://idol001.com/xingcheng/detail/summary/star-huachenyu-6652/5def0fdaf660468f2d8b456f/">Ⅱ 华晨宇确定于12月31日参加湖南卫视跨年演唱会</a>
+		<a href="http://baijiahao.baidu.com/s?id=1650317406755746979&wfr=spider&for=pc">Ⅲ 华晨宇在11月15日11月16日11月17日在海口连开三场演唱会</a>
+		<input type="button" id="button" class="button"value="华晨宇" onclick="TAN()" style="margin-top: 300px;margin-left: 250px">
+	</div>
+	</div>
+	<div class="div" id="div4" style="margin:0px;padding:0px">
+	  <div class="red" id="cf1">
+	  	<p class="biao">《卡西莫多的礼物》《我管你》《孩子》《异类》《神树》《疯人院》《烟火里的尘埃》《好想爱这个世界啊》等</p>
+	  	<div class="blue" id="cf" ><p class="dai">代表作品</p></div>
+      </div>
+      <img src="hhimg/66.jpg" style="width:330px;margin-left:320px;margin-top:-200px;">
+      <img src="hhimg/一专.png" style="width:200px;float:left;margin-left:150px;margin-top:-100px">
+      <img src="hhimg/二专.png" style="width:200px;float:left;margin-left:150px;margin-top:-100px">
+      <img src="hhimg/三专.png" style="width:200px;margin-top:100px;margin-left:-1080px">
+      <div class="zhuanji">
+      <p class="hcy">华晨宇出道至今，共发行了三张实体专。一专《卡西莫多的礼物》二专《异类》和三专《H》</p>
+      <p class="hcy">《一专》包括的歌曲有《烟火里的尘埃》《环游》《卡西莫多的礼物》等10首歌</p>
+      <p class="hcy">二专《异类》包括的歌曲有《异类》《我管你》《蜉蝣》等11首歌</p>
+      <p class="hcy">三专《H》包括的歌曲有《巨鹿》《我的滑板鞋2016》《here we are》等9首歌</p>
+      <div class="hrr">
+      <a href="https://music.163.com/#/playlist?id=2007335750&updTime=1512745921620">H</a>
+      <a href="https://www.xiami.com/album/234099806">异类</a>
+      <a href="https://www.xiami.com/album/1208109631">卡西莫多的礼物</a>
+     </div>
+  </div>
+	</div>
+	<div class="last-wrap">
+		<div class="last">
+			<ul>
+				<li><a href="#">帮助</a><span>|</span></li>
+				<li><a href="#">用户协议</a><span>|</span></li>
+				<li><a href="#">隐私声明</a><span>|</span></li>
+				<li><a href="#">常见问题</a><span>|</span></li>
+				<li><a href="#">合作伙伴</a><span>|</span></li>
+				<li><a href="#">关联账号</a><span>|</span></li>
+				<div class="hhh">
+				<li><a href="#">关于我们</a><span>|</span></li>
+				<li><a href="#">法律服务</a><span>|</span></li>
+			 	</div>
+			</ul>
+			<p style="margin-left:450px">  2019-2020  追易  版权所有</p>
+		</div>
+	</div>
+</body>
+<script>
+	function TAN(){
+           alert("您正在看华晨宇最近行程~");
+	}
+	function goTo(s){
+		location.hash = s; 
+	}
+	var lis=document.getElementsByTagName("li");
+        for (var i=0;i<lis.length;i++){
+            lis[i].onmouseover=function(e){
+                var e=e||window.event;
+                this.myTitle=this.innerHTML;
+                var tooltip=document.createElement("div");
+                tooltip.id="tooltip";
+                tooltip.innerHTML=this.myTitle;
+               
+                tooltip.style.left=e.clientX+10+"px";
+                tooltip.style.top=e.clientY+10+"px";
+                 document.body.appendChild(tooltip);
+            }
+              lis[i].onmove=function(e){
+                  var e=e||window.event;
+                   var tooltip=document.getElementById("tooltip");
+                tooltip.style.left=e.clientX+10+"px";
+                tooltip.style.top=e.clientY+10+"px";
+          }
+             lis[i].onmouseout=function(){
+              var tooltip=document.getElementById("tooltip");
+              document.body.removeChild(tooltip);
+       }
+     }
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			} else {
+				return getComputedStyle(obj, null)[attr];
+			}
+		}
+		function animate(obj,json,callback){
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				var isStop = true;
+				for(var attr in json){
+					var now = 0;
+					if(attr == 'opacity'){
+						now = parseInt(getStyle(obj,attr)*100);
+					}else{
+						now = parseInt(getStyle(obj,attr));
+					}
+					var speed = (json[attr] - now) / 8;
+					speed = speed>0?Math.ceil(speed):Math.floor(speed);
+					var cur = now + speed;
+					if(attr == 'opacity'){
+						obj.style[attr] = cur / 100;
+					}else{
+						obj.style[attr] = cur + 'px';
+					}
+					if(json[attr] !== cur){
+						isStop = false;
+					}
+				}
+				if(isStop){
+					clearInterval(obj.timer);
+					callback&&callback();
+				}
+			}, 30)
+		}
+	 var box=document.getElementById('box');
+	 var slider=document.getElementById('slider');
+	 var oNavlist=document.getElementById('nav').children;
+     var left=document.getElementById('left');
+     var right=document.getElementById('right');
+     var tip=document.getElementById('tip');
+     var index=1;
+     var timer;
+     var isMoving=false;
+     var s=2;
+     //自动轮播
+     function next(){
+     if(!isMoving){
+     	isMoving=true;
+      index++;
+      navChange();
+      animate(slider,{left:-1200*index},function(){
+      	    if(index===6){
+      		slider.style.left="-1200px";
+      		index=1;
+      	}
+      	isMoving=false;
+      });
+     }
+   }
+     function prev(){
+      if(isMoving){
+        return;
+      }
+      isMoving=true;
+      index--;
+      navChange();
+      animate(slider,{left:-1200*index},function(){
+      	    if(index === 0){
+      		slider.style.left="-6000px";
+      		index=5;
+      	}
+      	isMoving=false;
+      });
+     }
+     var timer=setInterval(next,3000);
+     //箭头划入
+     box.onmouseover=function(){
+     	animate(left, {opacity:50});
+     	animate(right,{opacity:50});
+     	clearInterval(timer);
+     }
+     //箭头划出
+     box.onmouseout=function(){
+     	animate(left, {opacity:0});
+     	animate(right,{opacity:0});
+     	timer=setInterval(next,3000);
+     }
+     right.onclick = next;
+     left.onclick = prev;
+     //五个按钮滑动图片
+     for(var i=0;i<oNavlist.length;i++){
+     	oNavlist[i].idx=i;
+
+     	oNavlist[i].onclick=function(){
+        	index=this.idx+1;
+     		animate(slider,{left:-1200*index})
+     	}
+     }
+    function navChange(){
+	for(var i = 0;i<oNavlist.length;i++){
+		oNavlist[i].className = " ";
+	}
+	if(index === 6){
+		oNavlist[0].className = "active";
+	}
+	else if(index === 0){
+		oNavlist[4].className = "active";
+	}
+	else{
+		oNavlist[index-1].className = "active";
+	}
+}
+    for(var i = 0 ;i<oNavlist.length;i++){
+	    oNavlist[i].idx = i;
+	    oNavlist[i].onclick=function(){
+		index = this.idx + 1;
+		navChange();
+		animate(slider,{left:-1200*index});
+	}
+}
+ 	var atimer;
+    var aonDiv=document.getElementById("cf1");
+    //从左向右动
+    aonDiv.onmouseover=function(){
+       clearInterval(atimer);
+       startMove(0);
+    }
+    aonDiv.onmouseout=function(){
+      clearInterval(atimer);
+      startMove(-1480);
+    }
+    function startMove(target){
+          atimer=setInterval(function(){
+           var speed=0;
+           if(aonDiv.offsetLeft<target){
+            speed=10;
+           }
+           else{
+            speed=-10;
+           }
+           if(aonDiv.offsetLeft==target){
+            clearInterval(atimer);
+           }
+           else{
+            aonDiv.style.left=aonDiv.offsetLeft+speed+"px";
+           }
+          }, 30)
+       }
+</script>
+</html>
