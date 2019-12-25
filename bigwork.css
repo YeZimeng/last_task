@@ -1,8 +1,8 @@
 /*
 * @Author: lenovo
 * @Date:   2019-12-22 11:02:52
-* @Last Modified by:   27987
-* @Last Modified time: 2019-12-24 23:40:00
+* @Last Modified by:   lenovo
+* @Last Modified time: 2019-12-25 09:58:57
 */
 
 /*
@@ -42,6 +42,7 @@ a{
 	height: 560px;
 	width: 1236px;
 	margin: 0 auto;
+	text-align: center;
 	position: relative;
 }
 .info{
@@ -146,16 +147,17 @@ a{
 	width: 1236px;
 	height: 1650px;
 	margin-top: 50px;
+	margin: 0 auto;
 }
 .two{
-	height: 1650px;
+	height: 1700px;
 	width: 1200px;
 	position: relative;
-	left: 28px;
+	margin: 0 auto;
 }
 .two>p{
 	font-size: 35px;
-	margin-top: 40px;
+	margin-top:50px;
 	margin-bottom: 30px;
 }
 .img{
@@ -172,13 +174,14 @@ a{
 .third{
 	width: 1236px;
 	height: 600px;
+	margin: 0 auto;
 	margin-top: 50px;
 }
 .three{
 	width: 1200px;
 	height: 600px;
-	margin-left: 160px;
-	/* margin: 0 auto; */
+	margin-left: 35px;
+	margin: 0 auto;
 }
 .three li{
 	width: 240px;
