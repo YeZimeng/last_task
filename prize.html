@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>快来抽奖啦！</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    #top{
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 1200px;
+        height: 20px;
+        background: pink;
+    }
+    #toop{
+        display:inline-block;
+    /* background-color: aqua; */
+        overflow: hidden;
+        right:150px;
+        position: absolute;
+        width: 885px;
+    /* width: 500px; */
+    /* margin: 0 auto; */
+    }
+    #aaa{
+        color:black;
+        display: inline-block;
+        margin-left:400px;
+    }
+
+    .big{
+        /* margin: 0 auto; */
+        margin-left: 150px;
+        /* margin-right: 50px; */
+        width: 540px;
+        height: 540px;
+    }
+    .small{
+        width: 180px;
+        height: 180px;
+        float: left;
+    }
+    #diff{
+        width: 180px;
+        height: 180px;
+        float: left;
+    }
+    /* .active{
+        opacity:0.5;
+        width: 180px;
+        height: 180px;
+        float: left;
+    } */
+    #youbian{
+        float: right;
+        width: 300px;
+        height: 300px;
+        margin-top: -520px;
+        margin-right: 150px;
+        color: red;
+    }
+
+    #demo {
+		overflow: hidden;
+		height: 435px;
+		width: 250px;
+		/* border: 1px solid #6699cc; */
+        border: 1px solid red;
+		font-size: 14px;
+		color: #61bef8;
+		line-height: 22px;
+		text-align: left;
+        padding: 10px;
+        
+	}
+    </style>
+</head>
+<body>
+    <div style="width: 100%;background-color: pink;">
+        <div id="top">
+            <div id="toop">
+                <span id="aaa">每次抽奖可获得一枚碎片，集齐所有碎片可兑换专辑一张！</span>
+            </div>
+        </div>
+    </div>
+    <div style="background-image: url(image/sheng_07.gif);height: 590px;;">
+    <div class="big">
+        <div class="small"><img src="image/a1.jpg"></div>
+        <div class="small"><img src="image/a2.jpg"></div>
+        <div class="small"><img src="image/a3.jpg"></div>
+        <div class="small"><img src="image/a4.jpg"></div>
+        <div id="diff"><img src="image/jiang.png"></div>
+        <div class="small"><img src="image/a6.jpg"></div>
+        <div class="small"><img src="image/a7.jpg"></div>
+        <div class="small"><img src="image/a8.jpg"></div>
+        <div class="small"><img src="image/a9.jpg"></div>
+    </div>
+    <div id="youbian">
+        <span><h1>------锦鲤榜------</h1></span>
+        <div text-align="center" id="demo" style="margin-top: 20px;">
+            <div id="demo1">天亮***兑换了华晨宇专辑<br/>**敲开心兑换了李健专辑<br/>小包**兑换了朴树专辑<br/>俺老孙**兑换了逃跑计划专辑<br/>啦里*了获得了稀有碎片朴树</div>
+            <div id="demo2"></div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    var diff=document.getElementById("diff");
+    var small=document.getElementsByClassName("small");
+    function asa(){
+        var now=parseInt(getStyle(aaa,"margin-left"));
+        if(now==-450){
+            aaa.style.marginLeft=800+"px";
+        }else{
+            aaa.style.marginLeft=now-1+"px";
+        }
+    }
+    var time=setInterval(asa,15);
+    function getStyle(obj,attr){
+        if(obj.currentStyle){
+            return obj.currentStyle[attr];
+        }else{
+            return getComputedStyle(obj,null)[attr];
+        }
+    }
+    var isClick=true;
+    var count=0;//圈数
+    var totalCount = 5;//计划转圈数
+    var index;
+    var i=0;
+    // diff.onclick=function start1(){
+    //     if(isClick){
+    //         count= 0;
+    //         //随机产生中奖位置
+    //         index = Math.floor(Math.random()*small.length+1);
+    //         roll();
+    //         isClick=false;
+    //         // speed =500;
+    //     }
+    // }
+    var flag=1;
+    diff.onclick=function(){
+        if(flag<=3)
+        {
+            start1();
+            flag++;
+        }else{
+            alert("您今天的抽奖机会已经用完了哦！");
+            //location.href="login.html";
+            setTimeout(jumpToBaidu, 5000);
+        }
+        
+    }
+    function jumpToBaidu(){
+			window.location.href = "details.html";
+		}
+	//setTimeout(jumpToBaidu, 5000);
+    function start1(){
+        if(isClick){
+            count= 0;
+            //随机产生中奖位置
+            index = Math.floor(Math.random()*small.length+1);
+            roll();
+            isClick=false;
+            // speed =500;
+        }
+    }
+    var speed =500;//转圈速度，越大越慢
+    var minSpeed =500;
+    var timer;
+   
+    function roll(){
+    //速度衰减
+        speed -= 50;
+        if(speed<=10){
+            speed=10;
+        }
+   
+        for(var j=0;j<small.length;j++){
+            small[j].style.opacity=0.5;
+        }
+        i++;
+        //计算转圈次数
+        if(i>=small.length){
+            i=0;
+            count++;
+        }
+
+      //  prize.innerHTML=arr[i];//旁边显示当前奖品
+        
+        small[i].style.opacity=1;//添加变色类名
+        //满足转圈数和指定位置就停止
+        if(count>=totalCount&&(i+1)==index){
+            clearTimeout(timer);
+            isClick=true;
+            speed=minSpeed;
+        }else{
+            timer = setTimeout(roll,speed);//不满足条件时调用定时器
+                    //最后一圈减速
+            if(count>=totalCount-1||speed<=50){
+                speed+=100;
+            }
+        }
+
+}
+
+
+    var demo = document.getElementById("demo");
+	var demo1 = document.getElementById("demo1");
+	var demo2 = document.getElementById("demo2");
+	var speed2 = 30;
+	//滚动速度值,值越大速度越慢
+	var nnn = 440 / demo1.offsetHeight;
+    // console.log(nnn);
+    // console.log(nnn);
+    
+	for(i = 0; i < nnn; i++) {
+		demo1.innerHTML += "<br />" + demo1.innerHTML;
+	}
+	demo2.innerHTML = demo1.innerHTML
+	//克隆demo2为demo1 
+	function Marquee() {
+		if(demo2.offsetTop - demo.scrollTop <= 0)
+			//当滚动至demo1与demo2交界时,demo跳到最顶端
+			demo.scrollTop -= demo1.offsetHeight;
+		else {
+			demo.scrollTop++ ;//如果是横向的 将 所有的 height top 改成 width left 
+		}
+	}
+	var MyMar = setInterval(Marquee, speed2);
+	//设置定时器,鼠标经过时清除定时器达到滚动停止的目的 
+	demo.onmouseover = function() {
+		clearInterval(MyMar)
+	}
+	//鼠标移开时重设定时器
+	demo.onmouseout = function() {
+		MyMar = setInterval(Marquee, speed2);
+	}
+
+
+</script>
+</html>
